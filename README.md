@@ -15,9 +15,9 @@
 - Needs to be documented if employee did not log an overtime
 
 ## UI:
-- Boostrap -> formatting
+- ~~Boostrap -> formatting~~
 
 ## Refactor TODOS:
 - Refactor user assocation integration test in post_spec
-- Add full name method
+- ~~Add full name method~~
 
