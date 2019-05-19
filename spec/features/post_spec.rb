@@ -13,4 +13,20 @@ describe 'navigate' do
      end
   end
 
+  describe 'creation' do
+    before do
+        visit new_post_path
+    end
+      it 'has a new form that can be reached' do
+        expect(page.status_code).to eql(200)
+      end
+      it 'can be created from new form page' do
+        fill_in 'post[date]', with: Date.today
+        fill_in 'post[rationale]', with: "Some text goes here"
+        click_on "Save"
+        expect(page).to have_content("Some text goes here")
+      end
+
+  end
+  
 end
