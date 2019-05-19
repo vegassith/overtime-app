@@ -18,6 +18,6 @@
 - ~~Boostrap -> formatting~~
 
 ## Refactor TODOS:
-- Refactor user assocation integration test in post_spec
+- ~~Refactor user assocation integration test in post_spec~~
 - ~~Add full name method~~
 
