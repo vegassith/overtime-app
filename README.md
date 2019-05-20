@@ -16,6 +16,8 @@
 
 ## UI:
 - ~~Boostrap -> formatting~~
+- Icons from Font Awesome
+- Update the styles for forms
 
 ## Refactor TODOS:
 - ~~Refactor user assocation integration test in post_spec~~
