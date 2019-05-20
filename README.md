@@ -10,9 +10,9 @@
 ## Features:
 - Approval Workflow
 - SMS Sending (Twillo) -> Link to approval or overtime input
-- Administrate -> Admin Dashboard
-- Block Non admin users and guest users
-- Email Summer to mangers for approval
+- ~~Administrate -> Admin Dashboard~~
+- ~~Block Non admin users and guest users~~
+- Email Summary to mangers for approval
 - Needs to be documented if employee did not log an overtime
 
 ## UI:
