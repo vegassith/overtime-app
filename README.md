@@ -9,6 +9,14 @@
 
 ## Features:
 - Approval Workflow
+  - Status to post
+     - submitted
+     - rejected
+     - approved
+  - status required
+  - status default value
+  - implement approcal stages
+  - Locking Posts
 - SMS Sending (Twillo) -> Link to approval or overtime input
 - ~~Administrate -> Admin Dashboard~~
 - ~~Block Non admin users and guest users~~
