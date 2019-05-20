@@ -31,4 +31,5 @@
 ## Refactor TODOS:
 - ~~Refactor user assocation integration test in post_spec~~
 - ~~Add full name method~~
+- Refactor posts/_form for admin user with status
 
