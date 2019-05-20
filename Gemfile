@@ -33,3 +33,5 @@ gem 'devise', '~> 4.6', '>= 4.6.2'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "gritter", "1.2.0"
+gem 'administrate'
+gem 'bourbon'
