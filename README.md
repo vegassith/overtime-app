@@ -15,7 +15,7 @@
      - approved
   - status required
   - status default value
-  - implement approcal stages
+  - implement approval stages
   - Locking Posts
 - SMS Sending (Twillo) -> Link to approval or overtime input
 - ~~Administrate -> Admin Dashboard~~
