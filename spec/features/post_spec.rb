@@ -17,10 +17,20 @@ describe 'navigate' do
      end
 
      it 'has a list of posts' do 
-        post1 = FactoryBot.create(:post)
-        post2 = FactoryBot.create(:second_post)
+        post1 = FactoryBot.create(:post, user: @user)
+        post2 = FactoryBot.create(:second_post, user: @user)
         visit posts_path
         expect(page).to have_content(/text|rationale/)   
+     end
+
+     it 'has a scope so that only posts creators can their posts ' do
+      post1 = FactoryBot.create(:post, user: @user)
+      post2 = FactoryBot.create(:second_post, user: @user)
+      other_user = FactoryBot.create(:post_from_other_user)
+      
+      visit posts_path
+      expect(page).to_not have_content(/This is our rationale for other user/)
+
      end
   end
   describe 'new' do
@@ -82,7 +92,7 @@ end
 
   describe 'delete' do
     before do
-      @post = FactoryBot.create(:post)
+      @post = FactoryBot.create(:post, user: @user)
     end
     it 'can be deleted' do
       visit posts_path
