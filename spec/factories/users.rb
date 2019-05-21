@@ -18,4 +18,12 @@ FactoryBot.define do
         password_confirmation {'asdfghjk'}
         
     end
+
+    factory :non_authorized_user, class: "User" do
+        first_name { 'Non' }
+        last_name { 'Authorized' }
+        email { generate :email }
+        password {'test123'}
+        password_confirmation {'test123'}
+    end
 end
