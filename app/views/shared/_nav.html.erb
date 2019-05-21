@@ -1,6 +1,7 @@
 <div class="logo">
     <h1>Time Tracker</h1>
 </div>
+<% if current_user%>
 <ul class="custom-nav nav nav-tabs">
     <li class="nav-item">
         <%= link_to "Home", root_path, class: "nav-link #{active?(root_path)}" %>
@@ -14,12 +15,15 @@
 
     <li class="nav-item dropdown ml-md-auto">
         <a class="nav-link dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
-            data-toggle="dropdown">Account</a>
+            data-toggle="dropdown">Options</a>
         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
-            <%= link_to "TODO: Admin dashboard", root_path, class: "dropdown-item" %>
-
+            <%if current_user.try(:type) == 'AdminUser' %>
+            <%= link_to "Admin Dashboard", admin_root_path, class: "dropdown-item" %>
             <div class="dropdown-divider"></div> 
+            <% end %>
+           
             <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         </div>
     </li>
 </ul>
+<% end %>
