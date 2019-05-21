@@ -32,4 +32,5 @@
 - ~~Refactor user assocation integration test in post_spec~~
 - ~~Add full name method~~
 - Refactor posts/_form for admin user with status
+- Refactor nav bar for current_user bloack and AdminUser Dashboard link
 
