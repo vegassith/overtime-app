@@ -1,9 +1,11 @@
 require 'rails_helper'
 
 describe 'navigate' do
+  let(:user) {FactoryBot.create(:user)}
+  let(:post) {FactoryBot.create(:post, user: user)}
   before do
-    @user = FactoryBot.create(:user)
-    login_as(@user, :scope => :user)
+    
+    login_as(user, :scope => :user)
   end
   describe 'index' do
     it 'can be reached successfully' do
@@ -17,15 +19,15 @@ describe 'navigate' do
      end
 
      it 'has a list of posts' do 
-        post1 = FactoryBot.create(:post, user: @user)
-        post2 = FactoryBot.create(:second_post, user: @user)
+        post1 = FactoryBot.create(:post, user: user)
+        post2 = FactoryBot.create(:second_post, user: user)
         visit posts_path
         expect(page).to have_content(/text|rationale/)   
      end
 
      it 'has a scope so that only posts creators can their posts ' do
-      post1 = FactoryBot.create(:post, user: @user)
-      post2 = FactoryBot.create(:second_post, user: @user)
+      post1 = FactoryBot.create(:post, user: user)
+      post2 = FactoryBot.create(:second_post, user: user)
       other_user = FactoryBot.create(:post_from_other_user)
       
       visit posts_path
@@ -64,14 +66,10 @@ describe 'navigate' do
   end
 
   describe 'edit' do
-    before do
-      @edit_user = User.create(first_name: "edit", last_name: "user", email: "edit@test.org", password: "test123", password_confirmation: "test123")
-      login_as(@edit_user, :scope => :user)
-      @edit_post = Post.create(date: Date.today, rationale: "edit text", user_id: @edit_user.id)
-    end
 
     it 'can be edited' do
-      visit edit_post_path(@edit_post)
+      visit edit_post_path(post)
+      
       fill_in 'post[date]', with: Date.today
       fill_in 'post[rationale]', with: "Edited Content"
       click_on "Save"
@@ -83,7 +81,7 @@ describe 'navigate' do
       non_authorized_user = FactoryBot.create(:non_authorized_user)
       login_as(non_authorized_user, :scope => :user)
 
-      visit edit_post_path(@edit_post)
+      visit edit_post_path(post)
       expect(current_path).to eq(root_path)  
 
     end
@@ -91,13 +89,17 @@ describe 'navigate' do
 end
 
   describe 'delete' do
-    before do
-      @post = FactoryBot.create(:post, user: @user)
-    end
+
     it 'can be deleted' do
+      logout(:user)
+
+      delete_user = FactoryBot.create(:user)
+      login_as(delete_user, :scope => :user)
+      post_to_delete = Post.create!(date: Date.today, rationale: "rationale content", user_id: delete_user.id)
+      
       visit posts_path
       
-      click_link("delete_post_#{@post.id}_from_index")
+      click_link("delete_post_#{post_to_delete.id}_from_index")
       expect(page.status_code).to eq(200)
 
     end
