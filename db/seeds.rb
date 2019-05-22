@@ -34,12 +34,12 @@ end
 puts "50 posts have been created for user #{@user2.first_name}"
 
 50.times do |auditlog|
-    AuditLog.create(user_id: @user2.id, status: 0, start_date: (Date.today - 4.days))
+    AuditLog.create(user_id: @user2.id, status: 0, start_date: (Date.today - 6.days))
 end
 puts "50 auditlog entries have been created for user #{@user2.first_name}"
 
 
 50.times do |auditlog|
-    AuditLog.create(user_id: @user1.id, status: 0, start_date: (Date.today - 4.days))
+    AuditLog.create(user_id: @user1.id, status: 0, start_date: (Date.today - 6.days))
 end
 puts "50 auditlog entries have been created for user #{@user1.first_name}"
