@@ -54,12 +54,14 @@ describe 'navigate' do
       it 'can be created from new form page' do
         fill_in 'post[date]', with: Date.today
         fill_in 'post[rationale]', with: "Some text goes here"
-        click_on "Save"
-        expect(page).to have_content("Some text goes here")
+        fill_in 'post[overtime_request]', with: 2.5
+        expect {click_on "Save"}.to change(Post, :count).by(1)
+        
       end
       it 'will have a user associated it' do
         fill_in 'post[date]', with: Date.today
         fill_in 'post[rationale]', with: "User Assocation"
+        fill_in 'post[overtime_request]', with: 2.5
         click_on "Save"
         expect(User.last.posts.last.rationale).to eql("User Assocation")  
       end
@@ -96,7 +98,7 @@ end
 
       delete_user = FactoryBot.create(:user)
       login_as(delete_user, :scope => :user)
-      post_to_delete = Post.create!(date: Date.today, rationale: "rationale content", user_id: delete_user.id)
+      post_to_delete = Post.create!(date: Date.today, rationale: "rationale content", user_id: delete_user.id, overtime_request: 1.5)
       
       visit posts_path
       
