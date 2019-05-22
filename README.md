@@ -6,6 +6,7 @@
 - ~~Post -> date:date rationale:text~~
 - ~~User -> Devise~~
 - ~~AdminUser -> STI of User~~
+- AuditLog
 
 ## Features:
 - Approval Workflow
@@ -25,13 +26,13 @@
 
 ## UI:
 - ~~Boostrap -> formatting~~
-- Icons from Font Awesome
+- ~~Icons from Font Awesome~~
 - ~~Update the styles for forms~~
 
 ## Refactor TODOS:
 - ~~Refactor user assocation integration test in post_spec~~
 - ~~Add full name method~~
-- Refactor posts/_form for admin user with status
+- ~~Refactor posts/_form for admin user with status~~
 - Refactor nav bar for current_user bloack and AdminUser Dashboard link
 - ~~Fix post_spec to use factories~~
 
