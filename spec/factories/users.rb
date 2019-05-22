@@ -9,6 +9,7 @@ FactoryBot.define do
         email { generate :email }
         password {'test123'}
         password_confirmation {'test123'}
+        phone { "#{ENV['SMS_NUMBER']}" }
     end
     factory :admin_user, class: "AdminUser" do
         first_name { 'Admin' }
@@ -16,7 +17,7 @@ FactoryBot.define do
         email { generate :email }
         password {'asdfghjk'}
         password_confirmation {'asdfghjk'}
-        
+        phone { "#{ENV['SMS_NUMBER']}" }
     end
 
     factory :non_authorized_user, class: "User" do
@@ -25,5 +26,6 @@ FactoryBot.define do
         email { generate :email }
         password {'test123'}
         password_confirmation {'test123'}
+        phone { "#{ENV['SMS_NUMBER']}" }
     end
 end

@@ -1,9 +1,25 @@
-@user1 = User.create(first_name: "Luke", last_name: "Skywalker", email: "mark@test.org", password: "test123", password_confirmation: "test123")
-@user2 = User.create(first_name: "Mace", last_name: "Windu", email: "mace@test.org", password: "test123", password_confirmation: "test123")
+@user1 = User.create(first_name: "Luke", 
+                    last_name: "Skywalker", 
+                    email: "mark@test.org", 
+                    password: "test123", 
+                    password_confirmation: "test123",
+                    phone: "#{ENV['SMS_NUMBER']}")
+@user2 = User.create(first_name: "Mace", 
+                    last_name: "Windu", 
+                    email: "mace@test.org", 
+                    password: "test123", 
+                    password_confirmation: "test123",
+                    phone: "#{ENV['SMS_NUMBER']}")
 
 puts "Created 2 users"
 
-AdminUser.create(first_name: "Admin", last_name: "User", email: "admin@test.org", password: "admin123", password_confirmation: "admin123")
+AdminUser.create(first_name: "Admin", 
+                last_name: "User", 
+                email: "admin@test.org", 
+                password: "admin123", 
+                password_confirmation: "admin123"
+                phone: "#{ENV['SMS_NUMBER']}")
+
 puts "Created Admin User"
 50.times do |post|
     Post.create!(date: Date.today, rationale: "#{post} rationale content", user_id: @user1.id, overtime_request: 5.0)

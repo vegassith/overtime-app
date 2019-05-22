@@ -36,3 +36,11 @@
 - Refactor nav bar for current_user bloack and AdminUser Dashboard link
 - ~~Fix post_spec to use factories~~
 
+## SMS Sending
+- Schedule to run at Sunday at 5pm
+- Iterate over all employees
+- Skip AdminUsers
+- Send a messages that has instructions and a link to log time
+- No spcaes or dashes for Phone Number
+- has to be 10 characters
+- has to be numeric 
