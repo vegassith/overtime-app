@@ -17,7 +17,7 @@ AdminUser.create(first_name: "Admin",
                 last_name: "User", 
                 email: "admin@test.org", 
                 password: "admin123", 
-                password_confirmation: "admin123"
+                password_confirmation: "admin123",
                 phone: "#{ENV['SMS_NUMBER']}")
 
 puts "Created Admin User"
@@ -32,3 +32,14 @@ puts "50 posts have been created for user #{@user1.first_name}"
 end
 
 puts "50 posts have been created for user #{@user2.first_name}"
+
+50.times do |auditlog|
+    AuditLog.create(user_id: @user2.id, status: 0, start_date: (Date.today - 4.days))
+end
+puts "50 auditlog entries have been created for user #{@user2.first_name}"
+
+
+50.times do |auditlog|
+    AuditLog.create(user_id: @user1.id, status: 0, start_date: (Date.today - 4.days))
+end
+puts "50 auditlog entries have been created for user #{@user1.first_name}"
