@@ -41,6 +41,8 @@
 - Iterate over all employees
 - Skip AdminUsers
 - Send a messages that has instructions and a link to log time
-- No spcaes or dashes for Phone Number
-- has to be 10 characters
-- has to be numeric 
+- ~~Integrate validation for phone attr in Users:~~
+  - ~~No spaces or dashes for Phone Number~~
+  - ~~has to be 10 characters~~
+  - ~~has to be numeric~~
+ 
