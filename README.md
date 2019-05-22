@@ -29,15 +29,9 @@
 - ~~Icons from Font Awesome~~
 - ~~Update the styles for forms~~
 
-## Refactor TODOS:
-- ~~Refactor user assocation integration test in post_spec~~
-- ~~Add full name method~~
-- ~~Refactor posts/_form for admin user with status~~
-- Refactor nav bar for current_user bloack and AdminUser Dashboard link
-- ~~Fix post_spec to use factories~~
-
 ## SMS Sending
-- Schedule to run at Sunday at 5pm
+- Schedule to run at Sunday at 5pm 
+  - Use whenever to schedule job
 - Iterate over all employees
 - Skip AdminUsers
 - Send a messages that has instructions and a link to log time
@@ -45,4 +39,20 @@
   - ~~No spaces or dashes for Phone Number~~
   - ~~has to be 10 characters~~
   - ~~has to be numeric~~
+
+## AuditLog
+- Keep track of if an employee had overtime or not
+- Dependecies:
+  - User
+- Attrs:
+  - user:references
+  - Status:integer (enum) -> pending, complete
+  - start_date:date -> default previous Monday
+  - date_verified 
  
+## Refactor TODOS:
+- ~~Refactor user assocation integration test in post_spec~~
+- ~~Add full name method~~
+- ~~Refactor posts/_form for admin user with status~~
+- Refactor nav bar for current_user bloack and AdminUser Dashboard link
+- ~~Fix post_spec to use factories~~
