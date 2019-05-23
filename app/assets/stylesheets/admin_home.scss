@@ -7,7 +7,8 @@
     border-radius: 3px;
     padding: 20px;
 }
-.home-block{
+
+.home-block {
     background-color: #1d3c91;
     color: white;
     margin: 12px 42px 12px 42px;
@@ -16,7 +17,11 @@
     -moz-border-radius: 3px;
     border-radius: 3px;
 }
+
 .pending-details {
     font-weight: 900;
+}
 
+.home-block:hover {
+    background-color: #172b63;
 }

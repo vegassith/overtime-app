@@ -5,20 +5,27 @@
 @import "posts";
 @import "admin_home";
 
-h1, h2 {
-    margin-top: 20px;
+h1,
+h2 {
+  margin-top: 20px;
 }
+
 .custom-nav {
-    margin-top: 15px;
+  margin-top: 15px;
 
 }
 
 .growl.growl-error {
-    color: #FFF;
-    background: #C0392B; }
-  .growl.growl-notice {
-    color: #FFF;
-    background: #2ECC71; }
-  .growl.growl-warning {
-    color: #FFF;
-    background: #F39C12; }
+  color: #FFF;
+  background: #C0392B;
+}
+
+.growl.growl-notice {
+  color: #FFF;
+  background: #2ECC71;
+}
+
+.growl.growl-warning {
+  color: #FFF;
+  background: #F39C12;
+}
