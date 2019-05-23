@@ -1,10 +1,7 @@
 <div class="container-fluid">
+    <h2>Items Pending Your Approval</h2>
+    <hr>
     <div class="pending-home row">
-            
-        <div class="home-block col-md-3">
-   
-           
-        </div>
-        
+        <%= render partial: 'pending_approval', locals: {pending_approvals: @pending_approvals} %>
     </div>
 </div>
