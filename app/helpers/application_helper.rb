@@ -8,6 +8,10 @@ module ApplicationHelper
         status_span_generator(status)
     end
 
+    def admin_types 
+        ['AdminUser']
+    end
+
     private
 
     def status_span_generator(status)
