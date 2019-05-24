@@ -21,7 +21,7 @@
 - SMS Sending (Twillo) -> Link to approval or overtime input
 - ~~Administrate -> Admin Dashboard~~
 - ~~Block Non admin users and guest users~~
-- Email Summary to mangers for approval
+- ~~Email Summary to mangers for approval~~
 - ~~Needs to be documented if employee did not log an overtime~~
 
 ## UI:
@@ -30,21 +30,21 @@
 - ~~Update the styles for forms~~
 
 ## SMS Sending
-- Schedule to run at Sunday at 5pm 
-  - Use whenever to schedule job
-- Iterate over all employees
-- Skip AdminUsers
-- Send a messages that has instructions and a link to log time
+- ~~Schedule to run at Sunday at 5pm~~
+  - ~~Use whenever to schedule job~~
+- ~~Iterate over all employees~~
+- ~~Skip AdminUsers~~
+- ~~Send a messages that has instructions and a link to log time~~
 - ~~Integrate validation for phone attr in Users:~~
   - ~~No spaces or dashes for Phone Number~~
   - ~~has to be 10 characters~~
   - ~~has to be numeric~~
 
 ## Manager Email
-- Iterate over the list of pending overtime requests
-- Check to usee if there are any requests
-- Iterate over the list of admin users/managers
-- Send the email to each admin
+- ~~Iterate over the list of pending overtime requests~~
+- ~~Check to usee if there are any requests~~
+- ~~Iterate over the list of admin users/managers~~
+- ~~Send the email to each admin~~
 
 ## AuditLog
 - ~~Keep track of if an employee had overtime or not~~

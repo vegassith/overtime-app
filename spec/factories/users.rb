@@ -3,7 +3,7 @@ FactoryBot.define do
         "test#{n}@test.com"
     end
 
-    factory :user do
+    factory :user, class: "Employee" do
         first_name { 'Jon' }
         last_name { 'Snow' }
         email { generate :email }
@@ -20,7 +20,7 @@ FactoryBot.define do
         phone { "#{ENV['SMS_NUMBER']}" }
     end
 
-    factory :non_authorized_user, class: "User" do
+    factory :non_authorized_user, class: "Employee" do
         first_name { 'Non' }
         last_name { 'Authorized' }
         email { generate :email }

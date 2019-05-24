@@ -1,10 +1,10 @@
-@user1 = User.create(first_name: "Luke", 
+@user1 = Employee.create(first_name: "Luke", 
                     last_name: "Skywalker", 
                     email: "mark@test.org", 
                     password: "test123", 
                     password_confirmation: "test123",
                     phone: "#{ENV['SMS_NUMBER']}")
-@user2 = User.create(first_name: "Mace", 
+@user2 = Employee.create(first_name: "Mace", 
                     last_name: "Windu", 
                     email: "mace@test.org", 
                     password: "test123", 
