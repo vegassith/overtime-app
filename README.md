@@ -40,6 +40,12 @@
   - ~~has to be 10 characters~~
   - ~~has to be numeric~~
 
+## Manager Email
+- Iterate over the list of pending overtime requests
+- Check to usee if there are any requests
+- Iterate over the list of admin users/managers
+- Send the email to each admin
+
 ## AuditLog
 - ~~Keep track of if an employee had overtime or not~~
 - ~~Dependecies:~~
