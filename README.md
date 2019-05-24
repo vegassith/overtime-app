@@ -23,8 +23,8 @@
 - ~~Block Non admin users and guest users~~
 - ~~Email Summary to mangers for approval~~
 - ~~Needs to be documented if employee did not log an overtime~~
-- Create audit log for each text message
-- Need to update end_date when confirmed
+- ~~Create audit log for each text message~~
+- ~~Need to update end_date when confirmed~~
 - Need to update audit log status when a overtine is rejected
 - ~~Add Home Icon~~
 - Update button date on home page to have time span
