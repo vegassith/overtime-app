@@ -6,23 +6,23 @@
 - ~~Post -> date:date rationale:text~~
 - ~~User -> Devise~~
 - ~~AdminUser -> STI of User~~
-- AuditLog
+- ~~AuditLog~~
 
 ## Features:
-- Approval Workflow
-  - Status to post
-     - submitted
-     - rejected
-     - approved
-  - status required
-  - status default value
-  - implement approval stages
-  - Locking Posts
+- ~~Approval Workflow~~
+  - ~~Status to post~~
+     - ~~submitted~~
+     - ~~rejected~~
+     - ~~approved~~
+  - ~~status required~~
+  - ~~status default value~~
+  - ~~implement approval stages~~
+  - ~~Locking Posts~~
 - SMS Sending (Twillo) -> Link to approval or overtime input
 - ~~Administrate -> Admin Dashboard~~
 - ~~Block Non admin users and guest users~~
 - Email Summary to mangers for approval
-- Needs to be documented if employee did not log an overtime
+- ~~Needs to be documented if employee did not log an overtime~~
 
 ## UI:
 - ~~Boostrap -> formatting~~
@@ -41,14 +41,14 @@
   - ~~has to be numeric~~
 
 ## AuditLog
-- Keep track of if an employee had overtime or not
-- Dependecies:
-  - User
-- Attrs:
-  - user:references
-  - Status:integer (enum) -> pending, complete
-  - start_date:date -> default previous Monday
-  - date_verified 
+- ~~Keep track of if an employee had overtime or not~~
+- ~~Dependecies:~~
+  - ~~User~~
+- ~~Attrs:~~
+  - ~~user:references~~
+  - ~~Status:integer (enum) -> pending, complete~~
+  - ~~start_date:date -> default previous Monday~~
+  - ~~date_verified~~
  
 ## Refactor TODOS:
 - ~~Refactor user assocation integration test in post_spec~~
