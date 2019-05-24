@@ -25,6 +25,15 @@
 - ~~Needs to be documented if employee did not log an overtime~~
 - Create audit log for each text message
 - Need to update end_date when confirmed
+- Need to update audit log status when a overtine is rejected
+- ~~Add Home Icon~~
+- Update button date on home page to have time span
+- Update button sort order
+- Remove unnecessary nav bar buttons for Manager
+- Fix admin dashboard bug
+- Implement honeybadger for error reporting
+- Implement New Relic for keeping server loaded
+
 ## UI:
 - ~~Boostrap -> formatting~~
 - ~~Icons from Font Awesome~~
