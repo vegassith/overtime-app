@@ -12,5 +12,17 @@ describe 'Home' do
         expect(post.reload.status).to eq('approved')
         
     end
+    it 'allows the employee to change the audit log status from the home page' do
+        
+        user = FactoryBot.create(:user)
+        login_as(user, :scope => :user)
+        auditlog = FactoryBot.create(:audit_log, user: user)
 
+        visit root_path
+        
+        click_on("confirm_#{auditlog.id}")
+
+        expect(auditlog.reload.status).to eq('confirmed')
+        
+    end
 end
