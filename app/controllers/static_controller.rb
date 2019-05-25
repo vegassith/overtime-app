@@ -2,10 +2,10 @@ class StaticController < ApplicationController
 
     def home
         if admin_types.include?(current_user.type)
-            @recent_audit_items = AuditLog.last(10)
-            @pending_approvals = Post.submitted
+           @pending_approvals = Post.submitted
+           @recent_audit_items = AuditLog.last(10)
         else       
-            @pending_audit_confirmations = current_user.audit_logs.pending
+            @pending_audit_confirmations = current_user.audit_logs.pending.by_start_date
         end
     end
 
