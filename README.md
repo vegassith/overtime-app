@@ -30,9 +30,9 @@
 - ~~Update button date on home page to have time span~~
 - ~~Update button sort order~~
 - ~~Remove unnecessary nav bar buttons for Manager~~
-- Fix admin dashboard bug
-- Implement honeybadger for error reporting
-- Implement New Relic for keeping server loaded
+- ~~Fix admin dashboard bug~~
+- ~~Implement honeybadger for error reporting~~
+- ~~Implement New Relic for keeping server loaded Used Honeybadger~~ 
 
 ## UI:
 - ~~Boostrap -> formatting~~
