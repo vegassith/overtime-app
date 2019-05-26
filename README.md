@@ -70,7 +70,7 @@
 - ~~Refactor user assocation integration test in post_spec~~
 - ~~Add full name method~~
 - ~~Refactor posts/_form for admin user with status~~
-- Refactor nav bar for current_user bloack and AdminUser Dashboard link
+- ~~Refactor nav bar for current_user bloack and AdminUser Dashboard link~~
 - ~~Fix post_spec to use factories~~
 
 ## New Enhancement 
@@ -92,14 +92,12 @@
   - Update field to hide values
 - Code review 
   - Security and best practices.
-- Add link to course in Readme
 - Add full set of hours
   - Change overtime_request to hours
   - Find/Replace all instances of overtime_request
   - Create new attr for `posts` that will have all hours for a `users` day
-- Add test link to readme
-- Search bug with Administrate bug
-  - Puma caught this error: undefined method `strip' for #<Array:0x007fa1df842500> (NoMethodError)
+- ~~Search bug with Administrate bug~~
+  - ~~```Puma caught this error: undefined method `strip' for #<Array:0x007fa1df842500> (NoMethodError)```~~
 - Add Twilio config vars to Heroku bug
 - Send SMS message daily 
   - Check to see if an employee has logged time from the day before (M-F), if they have no logged their time by 8am, send a SMS.
@@ -126,7 +124,7 @@
   - Policy issue with /audit_logs
 - SMS Bug bug
   - Sends only on Sundays, should be reversed.
-- New fields for posts 
+- New fields for `posts` 
   - On call attr
   - Call out attr
   - Signature
