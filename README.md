@@ -101,9 +101,8 @@
   - ```((Weekly salary / total weekly hours) / 2) * hours of overtime that week)```
   - ### Example:
   - ``` ((1,000/43) / 2) * 3 = 34ish```
-- Swap out rationale for work performed 
-  - In the `Post` model
-- Fix failing test for features/post_spec bug
+- ~~Swap out `rationale` for `work_performed`~~
+  - ~~In the `Post` model~~
 - Encrypting the SSN 
 - Integrate date range search bar for `posts`
 - Connect SalariedOvertimeCalculator module to workflow 

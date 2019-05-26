@@ -11,7 +11,7 @@ class PostDashboard < Administrate::BaseDashboard
     user: Field::BelongsTo.with_options(searchable: false),
     id: Field::Number.with_options(searchable: false),
     date: Field::DateTime.with_options(format: "%b %d, %Y", searchable: false),
-    rationale: Field::Text.with_options(searchable: true),
+    worked_performed: Field::Text.with_options(searchable: true),
     created_at: Field::DateTime.with_options(searchable: false),
     updated_at: Field::DateTime.with_options(searchable: false),
     status: Field::EnumField.with_options(searchable: true),
@@ -25,7 +25,7 @@ class PostDashboard < Administrate::BaseDashboard
   COLLECTION_ATTRIBUTES = [
     :user,
     :date,
-    :rationale,
+    :worked_performed,
     :status,
   ].freeze
 
@@ -34,7 +34,7 @@ class PostDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :user,
     :date,
-    :rationale,
+    :worked_performed,
     :status,
     :created_at,
     :updated_at,
@@ -46,7 +46,7 @@ class PostDashboard < Administrate::BaseDashboard
   FORM_ATTRIBUTES = [
     :user,
     :date,
-    :rationale,
+    :worked_performed,
     :status,
   ].freeze
 

@@ -9,9 +9,9 @@ RSpec.describe Post, type: :model do
       
       expect(@post).to be_valid  
     end
-    it 'cannot be created with a date, rationale and daily_hours' do
+    it 'cannot be created with a date, worked_performed and daily_hours' do
       @post.date = nil
-      @post.rationale = nil
+      @post.worked_performed = nil
       @post.daily_hours = nil
       expect(@post).to_not be_valid
     end

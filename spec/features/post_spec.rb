@@ -22,7 +22,7 @@ describe 'navigate' do
         post1 = FactoryBot.create(:post, user: user)
         post2 = FactoryBot.create(:second_post, user: user)
         visit posts_path
-        expect(page).to have_content(/text|rationale/)   
+        expect(page).to have_content(/text|worked_performed/)   
      end
 
      it 'has a scope so that only posts creators can their posts ' do
@@ -31,7 +31,7 @@ describe 'navigate' do
       other_user = FactoryBot.create(:post_from_other_user)
       
       visit posts_path
-      expect(page).to_not have_content(/This is our rationale for other user/)
+      expect(page).to_not have_content(/This is our worked_performed for other user/)
 
      end
   end
@@ -53,17 +53,17 @@ describe 'navigate' do
       end
       it 'can be created from new form page' do
         fill_in 'post[date]', with: Date.today
-        fill_in 'post[rationale]', with: "Some text goes here"
+        fill_in 'post[worked_performed]', with: "Some text goes here"
         fill_in 'post[daily_hours]', with: 2.5
         expect {click_on "Save"}.to change(Post, :count).by(1)
         
       end
       it 'will have a user associated it' do
         fill_in 'post[date]', with: Date.today
-        fill_in 'post[rationale]', with: "User Assocation"
+        fill_in 'post[worked_performed]', with: "User Assocation"
         fill_in 'post[daily_hours]', with: 2.5
         click_on "Save"
-        expect(User.last.posts.last.rationale).to eql("User Assocation")  
+        expect(User.last.posts.last.worked_performed).to eql("User Assocation")  
       end
   end
 
@@ -73,7 +73,7 @@ describe 'navigate' do
       visit edit_post_path(post)
       
       fill_in 'post[date]', with: Date.today
-      fill_in 'post[rationale]', with: "Edited Content"
+      fill_in 'post[worked_performed]', with: "Edited Content"
       click_on "Save"
       expect(page).to have_content("Edited Content")
     end
@@ -98,7 +98,7 @@ end
 
       delete_user = FactoryBot.create(:user)
       login_as(delete_user, :scope => :user)
-      post_to_delete = Post.create!(date: Date.today, rationale: "rationale content", user_id: delete_user.id, daily_hours: 11.5)
+      post_to_delete = Post.create!(date: Date.today, worked_performed: "worked_performed content", user_id: delete_user.id, daily_hours: 11.5)
       
       visit posts_path
       
