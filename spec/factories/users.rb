@@ -10,6 +10,8 @@ FactoryBot.define do
         password {'test123'}
         password_confirmation {'test123'}
         phone { "#{ENV['SMS_NUMBER']}" }
+        ssn {'1234'}
+        company {'ABC Company'}
     end
     factory :admin_user, class: "AdminUser" do
         first_name { 'Admin' }
@@ -18,6 +20,8 @@ FactoryBot.define do
         password {'asdfghjk'}
         password_confirmation {'asdfghjk'}
         phone { "#{ENV['SMS_NUMBER']}" }
+        ssn {'1234'}
+        company {'ABC Company'}
     end
 
     factory :non_authorized_user, class: "Employee" do
@@ -27,5 +31,7 @@ FactoryBot.define do
         password {'test123'}
         password_confirmation {'test123'}
         phone { "#{ENV['SMS_NUMBER']}" }
+        ssn {'1234'}
+        company {'ABC Company'}
     end
 end

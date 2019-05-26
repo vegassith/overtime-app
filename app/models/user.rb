@@ -8,12 +8,16 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  validates_presence_of :first_name, :last_name, :phone
+  validates_presence_of :first_name, :last_name, :phone, :ssn, :company
 
-  PHONE_REGEX = /\A[0-9*\Z]/
+  NUMBER_REGEX = /\A[0-9*\Z]/
+ 
 
-  validates_format_of :phone, with: PHONE_REGEX
+  validates_format_of :phone, with: NUMBER_REGEX
   validates :phone, length: { is: 10}
+  validates :ssn, length: { is: 4}
+  #validates_format_of :ssn, with: NUMBER_REGEX
+  validates_numericality_of :ssn
 def full_name 
   last_name.upcase + ", " + first_name.upcase
 end

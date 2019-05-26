@@ -3,13 +3,17 @@
                     email: "mark@test.org", 
                     password: "test123", 
                     password_confirmation: "test123",
-                    phone: "#{ENV['SMS_NUMBER']}")
+                    phone: "#{ENV['SMS_NUMBER']}",
+                    ssn: "1234",
+                    company: "ABC Company")
 @user2 = Employee.create(first_name: "Mace", 
                     last_name: "Windu", 
                     email: "mace@test.org", 
                     password: "test123", 
                     password_confirmation: "test123",
-                    phone: "#{ENV['SMS_NUMBER']}")
+                    phone: "#{ENV['SMS_NUMBER']}",
+                    ssn: "1234",
+                    company: "ABC Company")
 
 puts "Created 2 users"
 
@@ -18,7 +22,9 @@ AdminUser.create(first_name: "Admin",
                 email: "admin@test.org", 
                 password: "admin123", 
                 password_confirmation: "admin123",
-                phone: "#{ENV['SMS_NUMBER']}")
+                phone: "#{ENV['SMS_NUMBER']}",
+                ssn: "1234",
+                company: "ABC Company")
 
 puts "Created Admin User"
 
