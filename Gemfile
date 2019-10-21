@@ -30,7 +30,7 @@ group :development do
   gem 'letter_opener_web', '~> 1.0'
 end
 
-gem 'devise', '~> 4.6', '>= 4.6.2'
+gem 'devise', '~> 4.7'
 gem 'bootstrap', '~> 4.3.1'
 gem 'jquery-rails'
 gem "gritter", "1.2.0"
