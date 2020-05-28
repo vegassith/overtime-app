@@ -40,6 +40,6 @@ gem 'pundit', '~> 2.0', '>= 2.0.1'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.5'
 gem 'twilio-ruby', '~> 5.23'
 gem 'dotenv-rails', groups: [:development, :test]
-gem 'kaminari', '~> 1.1', '>= 1.1.1'
+gem 'kaminari', '~> 1.2'
 gem 'whenever', require: false
 gem 'honeybadger', '~> 4.3'
